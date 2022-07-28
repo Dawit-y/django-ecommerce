@@ -1,0 +1,18 @@
+{% extends 'store/main.html' %}
+
+{% block content %}
+<div>
+    <form action="" method="POST">
+        <div class="form-group ">
+            {% csrf_token %}
+            <p>Register here</p>
+
+            {{form.as_p}}
+            <input type="submit" value="Signup">
+        </div>
+    </form>
+    <p> already registered?</p>
+    <a href="{% url 'login-form' %}">Log in</a>
+</div>
+
+{% endblock content %}
